@@ -48,6 +48,7 @@
 		0DF2B7151D9425E1006FFE4C /* JCTabBarOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2B7141D9425E1006FFE4C /* JCTabBarOneViewController.m */; };
 		0DF2B7181D9425F3006FFE4C /* JCTabBarTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2B7171D9425F3006FFE4C /* JCTabBarTwoViewController.m */; };
 		0DF2B71A1D94266A006FFE4C /* TabBarDemo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF2B7191D94266A006FFE4C /* TabBarDemo.xcassets */; };
+		39A418211D9B54C500B77EAA /* UIStoryboard+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A418201D9B54C500B77EAA /* UIStoryboard+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,8 @@
 		0DF2B7161D9425F3006FFE4C /* JCTabBarTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTabBarTwoViewController.h; sourceTree = "<group>"; };
 		0DF2B7171D9425F3006FFE4C /* JCTabBarTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTabBarTwoViewController.m; sourceTree = "<group>"; };
 		0DF2B7191D94266A006FFE4C /* TabBarDemo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBarDemo.xcassets; sourceTree = "<group>"; };
+		39A4181F1D9B54C500B77EAA /* UIStoryboard+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Extension.h"; sourceTree = "<group>"; };
+		39A418201D9B54C500B77EAA /* UIStoryboard+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +396,8 @@
 		0D99CD0C1D9AB27E007BBE0E /* UIStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				39A4181F1D9B54C500B77EAA /* UIStoryboard+Extension.h */,
+				39A418201D9B54C500B77EAA /* UIStoryboard+Extension.m */,
 			);
 			path = UIStoryboard;
 			sourceTree = "<group>";
@@ -498,7 +503,7 @@
 				TargetAttributes = {
 					0DF2B6921D941BEF006FFE4C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7TVSQH639C;
+						DevelopmentTeam = RGDB7M59PE;
 					};
 				};
 			};
@@ -553,6 +558,7 @@
 				0D99CCEA1D9AB076007BBE0E /* UIButton+LCAlignment.m in Sources */,
 				0D99CCF11D9AB076007BBE0E /* JUtility.m in Sources */,
 				0DF2B7101D94258E006FFE4C /* JCTabBarViewController.m in Sources */,
+				39A418211D9B54C500B77EAA /* UIStoryboard+Extension.m in Sources */,
 				0D99CD031D9AB07E007BBE0E /* UIViewController+JCNavigationControllerExtension.m in Sources */,
 				0D99CCF01D9AB076007BBE0E /* JCDeviceInfo.m in Sources */,
 				0D99CD011D9AB07E007BBE0E /* JCWrapNavigationController.m in Sources */,
@@ -693,7 +699,7 @@
 				INFOPLIST_FILE = JCKitHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jam.JCKitHelp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlingmao.jiuwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -710,7 +716,7 @@
 				INFOPLIST_FILE = JCKitHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jam.JCKitHelp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlingmao.jiuwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

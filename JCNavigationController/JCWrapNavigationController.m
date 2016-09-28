@@ -10,6 +10,9 @@
 #import "JCWrapViewController.h"
 #import "UIViewController+JCNavigationControllerExtension.h"
 
+#import <objc/runtime.h>
+#import <objc/message.h>
+
 @interface JCWrapNavigationController ()
 
 @end
@@ -45,11 +48,12 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    
+
     UIImage *backItemImage = [UIImage imageNamed:@"jcnavigationitem_back"];
-    viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:backItemImage style:UIBarButtonItemStylePlain target:self action:@selector(didTapBackButton)];
-    
+    viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:backItemImage style:UIBarButtonItemStylePlain target:nil action:@selector(didTapBackButton)];
+
     [self.navigationController pushViewController:[JCWrapViewController wrapViewControllerWithRootController:viewController] animated:animated];
+    
     viewController.jcNavigationController = (JCNavigationViewController *)self.navigationController;
 }
 

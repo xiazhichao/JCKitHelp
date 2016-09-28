@@ -18,12 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
-    [self.jcNavigationController removeAtIndex:1];
+    if (self.jcNavigationController) {
+        [self.jcNavigationController removeAtIndex:1];
+    } else {
+        NSMutableArray *viewControllers = [self.navigationController.viewControllers mutableCopy];
+        [viewControllers removeObjectAtIndex:1];
+        [self.navigationController setViewControllers:viewControllers animated:YES];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {

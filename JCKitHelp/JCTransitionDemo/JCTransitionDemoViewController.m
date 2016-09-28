@@ -55,7 +55,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.jcNavigationController.delegate = self;
+//    self.jcNavigationController.delegate = self;
     [self performSegueWithIdentifier:@"page" sender:nil];
 }
 
@@ -77,6 +77,7 @@
                                                  toViewController:(UIViewController *)toVC
 {
     if (operation == UINavigationControllerOperationPush) {
+        self.jcNavigationController.delegate = nil;
         return [[JCTranition alloc] init];
     } else if (operation == UINavigationControllerOperationPop){
         return nil;

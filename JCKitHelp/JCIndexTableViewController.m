@@ -8,6 +8,8 @@
 
 #import "JCIndexTableViewController.h"
 
+#import "JCRouter.h"
+
 @interface JCIndexTableViewController ()
 
 @property (nonatomic, strong) NSArray *titles;
@@ -23,6 +25,7 @@
     self.titles = @[@"UITabBarItem动画效果", @"转场动画效果"];
     
     self.classNames = @[@"JCTabBarViewController"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,14 +51,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-        NSString *className = self.classNames[indexPath.row];
-        Class class = NSClassFromString(className);
-        if (class) {
-            UIViewController *ctrl = class.new;
-            ctrl.title = _titles[indexPath.row];
-            [self.navigationController pushViewController:ctrl animated:YES];
-        }
-        
+//        NSString *className = self.classNames[indexPath.row];
+//        Class class = NSClassFromString(className);
+//        if (class) {
+//            UIViewController *ctrl = class.new;
+//            ctrl.title = _titles[indexPath.row];
+//            [self.navigationController pushViewController:ctrl animated:YES];
+//        }
+        [[JCRouter shareRouter] openURL:@"tabController" extraParams:nil animated:YES];
         return;
     }
     

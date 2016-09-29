@@ -8,6 +8,14 @@
 
 #import "AppDelegate.h"
 
+#import "JCRouter.h"
+
+#import "UIStoryboard+Extension.h"
+
+#import "JCNavigationViewController.h"
+
+#import "JCTabBarViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +25,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIViewController *rootViewController = [UIStoryboard storyboardWithName:@"Main" identifier:nil];
+    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window setRootViewController:navc];
+    [self.window makeKeyAndVisible];
+    
+    [[JCRouter shareRouter] setRootViewController:navc];
+    
+    [[JCRouter shareRouter] mapKey:@"tabController" toController:[JCTabBarViewController class]];
+    
     return YES;
 }
 

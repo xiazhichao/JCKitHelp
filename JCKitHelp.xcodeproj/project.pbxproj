@@ -25,6 +25,7 @@
 		0D48126F1D9D44D60049D713 /* TextUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4812631D9D44D60049D713 /* TextUtility.m */; };
 		0D4812701D9D44D60049D713 /* UIColor+JCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4812661D9D44D60049D713 /* UIColor+JCColor.m */; };
 		0D4812711D9D44D60049D713 /* UIImage+UIImageScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4812691D9D44D60049D713 /* UIImage+UIImageScale.m */; };
+		0D4812751D9D4C610049D713 /* JCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4812741D9D4C610049D713 /* JCRouter.m */; };
 		0D99CCF31D9AB076007BBE0E /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D99CCDF1D9AB076007BBE0E /* SSKeychain.m */; };
 		0D99CCF41D9AB076007BBE0E /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D99CCE11D9AB076007BBE0E /* SSKeychainQuery.m */; };
 		0D99CD001D9AB07E007BBE0E /* JCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D99CCF81D9AB07E007BBE0E /* JCNavigationViewController.m */; };
@@ -89,6 +90,8 @@
 		0D4812661D9D44D60049D713 /* UIColor+JCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JCColor.m"; sourceTree = "<group>"; };
 		0D4812681D9D44D60049D713 /* UIImage+UIImageScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageScale.h"; sourceTree = "<group>"; };
 		0D4812691D9D44D60049D713 /* UIImage+UIImageScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageScale.m"; sourceTree = "<group>"; };
+		0D4812731D9D4C610049D713 /* JCRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRouter.h; sourceTree = "<group>"; };
+		0D4812741D9D4C610049D713 /* JCRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRouter.m; sourceTree = "<group>"; };
 		0D99CCDE1D9AB076007BBE0E /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		0D99CCDF1D9AB076007BBE0E /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		0D99CCE01D9AB076007BBE0E /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
@@ -321,14 +324,24 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
+		0D4812721D9D48FE0049D713 /* JCRouter */ = {
+			isa = PBXGroup;
+			children = (
+				0D4812731D9D4C610049D713 /* JCRouter.h */,
+				0D4812741D9D4C610049D713 /* JCRouter.m */,
+			);
+			path = JCRouter;
+			sourceTree = "<group>";
+		};
 		0D99CCA31D9AB076007BBE0E /* JCKit */ = {
 			isa = PBXGroup;
 			children = (
-				0D99CCDC1D9AB076007BBE0E /* Vender */,
-				0D4812551D9D44D60049D713 /* JCTool */,
 				0D4812291D9D423A0049D713 /* JCCoreObject */,
 				0D48122A1D9D42530049D713 /* JCUIObject */,
 				0D48122B1D9D42850049D713 /* JCMacros */,
+				0D4812551D9D44D60049D713 /* JCTool */,
+				0D4812721D9D48FE0049D713 /* JCRouter */,
+				0D99CCDC1D9AB076007BBE0E /* Vender */,
 			);
 			path = JCKit;
 			sourceTree = "<group>";
@@ -549,6 +562,7 @@
 				0D99CCF41D9AB076007BBE0E /* SSKeychainQuery.m in Sources */,
 				0D48124F1D9D44B50049D713 /* UICollectionView+JCPlaceHoldView.m in Sources */,
 				0D48126E1D9D44D60049D713 /* NSTimer+Addition.m in Sources */,
+				0D4812751D9D4C610049D713 /* JCRouter.m in Sources */,
 				0D99CCF31D9AB076007BBE0E /* SSKeychain.m in Sources */,
 				0DF2B7181D9425F3006FFE4C /* JCTabBarTwoViewController.m in Sources */,
 				0D4812381D9D44AA0049D713 /* NSDictionary+ExtraMethod.m in Sources */,

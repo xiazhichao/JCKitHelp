@@ -16,6 +16,13 @@
 
 @implementation JCTabBarViewController
 
+- (id)initWithRouterParams:(NSDictionary *)params {
+    if ((self = [self initWithNibName:nil bundle:nil])) {
+        self.title = @"User";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

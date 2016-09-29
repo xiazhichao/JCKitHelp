@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIButton (LCAlignment)
+
 - (void)lc_titleImageHorizontalAlignmentWithSpace:(float)space;
 - (void)lc_imageTitleHorizontalAlignmentWithSpace:(float)space;
 - (void)lc_titleImageVerticalAlignmentWithSpace:(float)space;

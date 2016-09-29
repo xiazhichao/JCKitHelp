@@ -1,6 +1,6 @@
 //
 //  UIButton+LCAlignment.m
-//  Pods
+//  
 //
 //  Created by jiangliancheng on 16/4/8.
 //

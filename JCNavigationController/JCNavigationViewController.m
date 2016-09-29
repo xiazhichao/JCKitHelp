@@ -75,11 +75,9 @@
     if (index < 1 || index > [self.viewControllers count]) {
         return ;
     }
-    NSMutableArray *viewControllers = [self.viewControllers mutableCopy];
-    [viewControllers removeObjectAtIndex:1];
-    
-    [self setViewControllers:viewControllers animated:YES];
-    
+    NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:self.viewControllers];
+    [viewControllers removeObjectAtIndex:index];
+    self.viewControllers = viewControllers;
 }
 
 #pragma mark - UINavigationControllerDelegate

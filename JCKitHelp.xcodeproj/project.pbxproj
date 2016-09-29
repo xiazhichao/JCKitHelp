@@ -483,7 +483,7 @@
 				TargetAttributes = {
 					0DF2B6921D941BEF006FFE4C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = RGDB7M59PE;
+						DevelopmentTeam = 7TVSQH639C;
 					};
 				};
 			};
@@ -679,7 +679,7 @@
 				INFOPLIST_FILE = JCKitHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xlingmao.jiuwei;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jam.JCKitHelp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -696,7 +696,7 @@
 				INFOPLIST_FILE = JCKitHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xlingmao.jiuwei;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jam.JCKitHelp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface JCNavigationViewController : UINavigationController
+
 /**
  *  @author Jam, 16-09-27 22:09:16
  *

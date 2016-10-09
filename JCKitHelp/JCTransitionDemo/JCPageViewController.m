@@ -7,13 +7,19 @@
 //
 
 #import "JCPageViewController.h"
-
+#import "UIStoryboard+Extension.h"
 #import "UIViewController+JCNavigationControllerExtension.h"
+#import "JCRouter.h"
 
 @interface JCPageViewController ()
 @end
 
 @implementation JCPageViewController
+
++ (id)allocWithRouterParams:(NSDictionary *)params {
+    JCPageViewController *instance = [UIStoryboard storyboardWithName:@"TransitionDemo" identifier:@"pageController"];
+    return instance;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,5 +52,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)onClickDismiss:(id)sender {
+    [[JCRouter shareRouter] dismissViewControllerWithIndex:1 animated:YES completion:nil];
+}
 
 @end

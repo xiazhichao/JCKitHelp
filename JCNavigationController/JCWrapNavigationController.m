@@ -46,7 +46,6 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     [self.navigationController pushViewController:viewController animated:animated];
-    viewController.jcNavigationController = (JCNavigationViewController *)self.navigationController;
 }
 
 

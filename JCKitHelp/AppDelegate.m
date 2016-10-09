@@ -18,6 +18,8 @@
 
 #import "JCTransitionDemoViewController.h"
 
+#import "JCPageViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -37,6 +39,7 @@
     
     [[JCRouter shareRouter] mapKey:@"tabController/:id/:userName" toController:[JCTabBarViewController class]];
     [[JCRouter shareRouter] mapKey:@"TransitionDemo" toController:[JCTransitionDemoViewController class]];
+    [[JCRouter shareRouter] mapKey:@"pageController" toController:[JCPageViewController class]];
     
     return YES;
 }

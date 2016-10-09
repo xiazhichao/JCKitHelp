@@ -62,7 +62,7 @@
         <!--Page View Controller-->
         <scene sceneID="Ioo-Ss-KyN">
             <objects>
-                <viewController id="2qn-ZT-Tjf" customClass="JCPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pageController" id="2qn-ZT-Tjf" customClass="JCPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NvE-Hb-VAX"/>
                         <viewControllerLayoutGuide type="bottom" id="lv3-FP-DSm"/>
@@ -70,7 +70,54 @@
                     <view key="view" contentMode="scaleToFill" id="xVO-ym-LMv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M2-w8-xWJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="4YM-wG-vKJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="wbj-8e-UdV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4YM-wG-vKJ"/>
+                                        <exclude reference="wbj-8e-UdV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4YM-wG-vKJ"/>
+                                        <include reference="wbj-8e-UdV"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onClickDismiss:" destination="2qn-ZT-Tjf" eventType="touchUpInside" id="ct1-uF-ypo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0M2-w8-xWJ" firstAttribute="centerX" secondItem="xVO-ym-LMv" secondAttribute="centerX" id="59Z-OH-LyE"/>
+                            <constraint firstItem="0M2-w8-xWJ" firstAttribute="centerY" secondItem="xVO-ym-LMv" secondAttribute="centerY" id="clW-zY-IP8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0M2-w8-xWJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="59Z-OH-LyE"/>
+                                <exclude reference="clW-zY-IP8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0M2-w8-xWJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="59Z-OH-LyE"/>
+                                <include reference="clW-zY-IP8"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>

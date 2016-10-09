@@ -56,7 +56,7 @@
 //            ctrl.title = _titles[indexPath.row];
 //            [self.navigationController pushViewController:ctrl animated:YES];
 //        }
-        [[JCRouter shareRouter] pushURL:@"tabController/4/title" extraParams:nil animated:YES];
+        [[JCRouter shareRouter] presentURL:@"tabController/4/title" completion:nil];
         return;
     }
     

@@ -7,7 +7,7 @@
 //
 
 #import "JCTransitionDemoViewController.h"
-
+#import "JCRouter.h"
 #import "UIViewController+JCNavigationControllerExtension.h"
 #import "JCTranition.h"
 
@@ -61,7 +61,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    self.jcNavigationController.delegate = self;
-    [self performSegueWithIdentifier:@"page" sender:nil];
+//    [self performSegueWithIdentifier:@"page" sender:nil];
+    [[JCRouter shareRouter] pushURL:@"pageController"];
 }
 
 /*

@@ -66,6 +66,7 @@
     
     if (self) {
         self.routes = [[NSMutableDictionary alloc] init];
+        self.defaultNavigationClass = [UINavigationController class];
     }
     
     return self;
@@ -95,7 +96,64 @@
     UIViewController *controller = [self controllerForRouterOption:routerParams];
     
     if (self.currentNavigationViewController) {
-        [(UINavigationController *)self.currentNavigationViewController pushViewController:controller animated:YES];
+        [self.currentNavigationViewController pushViewController:controller animated:YES];
+    } else {
+        UINavigationController *navc = [[self.defaultNavigationClass alloc] initWithRootViewController:controller];
+        self.applicationDelegate.window.rootViewController = navc;
+    }
+}
+
+- (void)popViewControllerAnimated:(BOOL)animated {
+    [self popViewControllerWithIndex:1 animated:animated];
+}
+
+- (void)popViewControllerWithIndex:(NSInteger)index animated:(BOOL)animated {
+    if (self.currentNavigationViewController) {
+        NSInteger count = [[self.currentNavigationViewController viewControllers] count];
+        if (count > index) {
+            [self.currentNavigationViewController popToViewController:[[self.currentNavigationViewController viewControllers] objectAtIndex:count-1-index] animated:animated];
+        } else {
+            NSAssert(0, @"pop层级超过最大层级");
+        }
+    }
+}
+
+- (void)presentURL:(NSString *)urlString completion:(void (^)(void))completion {
+    [self presentURL:urlString extraParams:nil completion:completion];
+}
+
+- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams completion:(void (^)(void))completion {
+    [self presentURL:urlString extraParams:extraParams animated:YES completion:completion];
+}
+
+- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams animated:(BOOL)animated completion:(void (^)(void))completion {
+    
+    JCRouterParams *routerParams = [self routerParamsForUrl:urlString withextraParams:extraParams];
+    UIViewController *controller = [self controllerForRouterOption:routerParams];
+    
+    if (self.rootViewController) {
+        [self.rootViewController presentViewController:controller animated:animated completion:completion];
+    } else {
+        self.applicationDelegate.window.rootViewController = controller;
+    }
+}
+
+- (void)dismissViewControllerAnimated:(BOOL)animated completion:(void (^)(void))completion {
+    [self dismissViewControllerWithIndex:1 animated:animated completion:completion];
+}
+
+- (void)dismissViewControllerWithIndex:(NSInteger)index animated:(BOOL)animated completion:(void (^)(void))completion {
+    UIViewController *rootVC = self.rootViewController;
+    if (rootVC) {
+        while (index > 0) {
+            rootVC = rootVC.presentingViewController;
+            index -= 1;
+        }
+        [rootVC dismissViewControllerAnimated:YES completion:completion];
+    }
+    
+    if (!rootVC.presentedViewController) {
+        NSAssert(0, @"dismiss层级超过最大层级");
     }
 }
 

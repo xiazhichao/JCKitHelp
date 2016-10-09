@@ -17,6 +17,11 @@
 
 @implementation JCTransitionDemoViewController
 
++ (id)allocWithRouterParams:(NSDictionary *)params {
+    JCTransitionDemoViewController *instance = [[UIStoryboard storyboardWithName:@"TransitionDemo" bundle:nil] instantiateInitialViewController];
+    return instance;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

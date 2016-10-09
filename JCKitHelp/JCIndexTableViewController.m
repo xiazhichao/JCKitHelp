@@ -25,7 +25,6 @@
     self.titles = @[@"UITabBarItem动画效果", @"转场动画效果"];
     
     self.classNames = @[@"JCTabBarViewController"];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +37,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.titles.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
@@ -58,12 +56,14 @@
 //            ctrl.title = _titles[indexPath.row];
 //            [self.navigationController pushViewController:ctrl animated:YES];
 //        }
-        [[JCRouter shareRouter] openURL:@"tabController" extraParams:nil animated:YES];
+        [[JCRouter shareRouter] pushURL:@"tabController/4/title" extraParams:nil animated:YES];
         return;
     }
     
-    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"TransitionDemo" bundle:nil] instantiateInitialViewController];
-    [self.navigationController pushViewController:viewController animated:YES];
+    [[JCRouter shareRouter] pushURL:@"TransitionDemo"];
+    
+//    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"TransitionDemo" bundle:nil] instantiateInitialViewController];
+//    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 /*

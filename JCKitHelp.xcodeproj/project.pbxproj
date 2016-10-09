@@ -50,6 +50,7 @@
 		0DF2B7151D9425E1006FFE4C /* JCTabBarOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2B7141D9425E1006FFE4C /* JCTabBarOneViewController.m */; };
 		0DF2B7181D9425F3006FFE4C /* JCTabBarTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2B7171D9425F3006FFE4C /* JCTabBarTwoViewController.m */; };
 		0DF2B71A1D94266A006FFE4C /* TabBarDemo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF2B7191D94266A006FFE4C /* TabBarDemo.xcassets */; };
+		3984B4291DA9D8A100A5FAFA /* JCRouterParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984B4281DA9D8A100A5FAFA /* JCRouterParams.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,8 @@
 		0DF2B7161D9425F3006FFE4C /* JCTabBarTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTabBarTwoViewController.h; sourceTree = "<group>"; };
 		0DF2B7171D9425F3006FFE4C /* JCTabBarTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTabBarTwoViewController.m; sourceTree = "<group>"; };
 		0DF2B7191D94266A006FFE4C /* TabBarDemo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBarDemo.xcassets; sourceTree = "<group>"; };
+		3984B4271DA9D8A100A5FAFA /* JCRouterParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRouterParams.h; sourceTree = "<group>"; };
+		3984B4281DA9D8A100A5FAFA /* JCRouterParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRouterParams.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +332,8 @@
 			children = (
 				0D4812731D9D4C610049D713 /* JCRouter.h */,
 				0D4812741D9D4C610049D713 /* JCRouter.m */,
+				3984B4271DA9D8A100A5FAFA /* JCRouterParams.h */,
+				3984B4281DA9D8A100A5FAFA /* JCRouterParams.m */,
 			);
 			path = JCRouter;
 			sourceTree = "<group>";
@@ -496,7 +501,7 @@
 				TargetAttributes = {
 					0DF2B6921D941BEF006FFE4C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7TVSQH639C;
+						DevelopmentTeam = RGDB7M59PE;
 					};
 				};
 			};
@@ -542,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D4812701D9D44D60049D713 /* UIColor+JCColor.m in Sources */,
+				3984B4291DA9D8A100A5FAFA /* JCRouterParams.m in Sources */,
 				0D4812361D9D44AA0049D713 /* NSArray+ExtraMethod.m in Sources */,
 				0DF2B70C1D942112006FFE4C /* JCIndexTableViewController.m in Sources */,
 				0D99CD021D9AB07E007BBE0E /* JCWrapViewController.m in Sources */,
@@ -693,7 +699,7 @@
 				INFOPLIST_FILE = JCKitHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jam.JCKitHelp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlingmao.jiuwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -710,7 +716,7 @@
 				INFOPLIST_FILE = JCKitHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jam.JCKitHelp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlingmao.jiuwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

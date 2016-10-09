@@ -16,6 +16,8 @@
 
 #import "JCTabBarViewController.h"
 
+#import "JCTransitionDemoViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -27,15 +29,16 @@
     // Override point for customization after application launch.
     
     UIViewController *rootViewController = [UIStoryboard storyboardWithName:@"Main" identifier:nil];
-    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    JCNavigationViewController *navc = [[JCNavigationViewController alloc] initWithRootViewController:rootViewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setRootViewController:navc];
     [self.window makeKeyAndVisible];
     
-    [[JCRouter shareRouter] setRootViewController:navc];
+    [[JCRouter shareRouter] setRootViewController:rootViewController.navigationController];
     
-    [[JCRouter shareRouter] mapKey:@"tabController" toController:[JCTabBarViewController class]];
+    [[JCRouter shareRouter] mapKey:@"tabController/:id/:userName" toController:[JCTabBarViewController class]];
+    [[JCRouter shareRouter] mapKey:@"TransitionDemo" toController:[JCTransitionDemoViewController class]];
     
     return YES;
 }

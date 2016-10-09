@@ -10,7 +10,6 @@
 
 @interface JCRouter : NSObject
 
-@property (nonatomic, assign) UIViewController *rootViewController;
 @property (nonatomic, strong) Class defaultNavigationClass;
 
 + (instancetype)shareRouter;

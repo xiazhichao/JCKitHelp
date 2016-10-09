@@ -35,8 +35,6 @@
     [self.window setRootViewController:navc];
     [self.window makeKeyAndVisible];
     
-    [[JCRouter shareRouter] setRootViewController:rootViewController.navigationController];
-    
     [[JCRouter shareRouter] mapKey:@"tabController/:id/:userName" toController:[JCTabBarViewController class]];
     [[JCRouter shareRouter] mapKey:@"TransitionDemo" toController:[JCTransitionDemoViewController class]];
     

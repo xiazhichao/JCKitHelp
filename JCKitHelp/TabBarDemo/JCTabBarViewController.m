@@ -18,7 +18,6 @@
 
 - (id)initWithRouterParams:(NSDictionary *)params {
     if ((self = [self initWithNibName:nil bundle:nil])) {
-        self.title = @"User";
     }
     return self;
 }
@@ -27,6 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setTabBarControllers];
+    self.title = @"User";
 }
 
 - (void)didReceiveMemoryWarning {

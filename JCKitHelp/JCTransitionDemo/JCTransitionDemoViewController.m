@@ -60,8 +60,6 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    self.jcNavigationController.delegate = self;
-//    [self performSegueWithIdentifier:@"page" sender:nil];
     [[JCRouter shareRouter] currentNavigationViewController].delegate = self;
     [[JCRouter shareRouter] pushURL:@"pageController"];
 }

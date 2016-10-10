@@ -119,17 +119,24 @@
 }
 
 - (void)presentURL:(NSString *)urlString completion:(void (^)(void))completion {
-    [self presentURL:urlString extraParams:nil completion:completion];
+    [self presentURL:urlString withNavigationClass:nil completion:completion];
 }
 
-- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams completion:(void (^)(void))completion {
-    [self presentURL:urlString extraParams:extraParams animated:YES completion:completion];
+- (void)presentURL:(NSString *)urlString withNavigationClass:(Class)navigationClass completion:(void (^)(void))completion {
+    [self presentURL:urlString extraParams:nil withNavigationClass:navigationClass completion:completion];
 }
 
-- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams animated:(BOOL)animated completion:(void (^)(void))completion {
-    
+- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams withNavigationClass:(Class)navigationClass completion:(void (^)(void))completion {
+    [self presentURL:urlString extraParams:extraParams withNavigationClass:navigationClass animated:YES completion:completion];
+}
+
+- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams withNavigationClass:(Class)navigationClass animated:(BOOL)animated completion:(void (^)(void))completion {
     JCRouterParams *routerParams = [self routerParamsForUrl:urlString withextraParams:extraParams];
     UIViewController *controller = [self controllerForRouterOption:routerParams];
+    
+    if (navigationClass) {
+        controller = [[navigationClass alloc] initWithRootViewController:controller];
+    }
     
     if (self.rootViewController) {
         [self.rootViewController presentViewController:controller animated:animated completion:completion];

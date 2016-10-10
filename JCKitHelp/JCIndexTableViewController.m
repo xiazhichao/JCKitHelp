@@ -56,11 +56,11 @@
 //            ctrl.title = _titles[indexPath.row];
 //            [self.navigationController pushViewController:ctrl animated:YES];
 //        }
-        [[JCRouter shareRouter] presentURL:@"tabController/4/title" completion:nil];
+        [[JCRouter shareRouter] presentURL:@"tabController/4/title" withNavigationClass:[UINavigationController class] completion:nil];
         return;
     }
     
-    [[JCRouter shareRouter] pushURL:@"TransitionDemo"];
+    [[JCRouter shareRouter] presentURL:@"TransitionDemo" completion:nil];
     
 //    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"TransitionDemo" bundle:nil] instantiateInitialViewController];
 //    [self.navigationController pushViewController:viewController animated:YES];

@@ -21,8 +21,9 @@
 - (void)pushURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams animated:(BOOL)animated;
 
 - (void)presentURL:(NSString *)urlString completion:(void (^)(void))completion;
-- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams completion:(void (^)(void))completion;
-- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams animated:(BOOL)animated completion:(void (^)(void))completion;
+- (void)presentURL:(NSString *)urlString withNavigationClass:(Class)navigationClass completion:(void (^)(void))completion;
+- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams withNavigationClass:(Class)navigationClass completion:(void (^)(void))completion;
+- (void)presentURL:(NSString *)urlString extraParams:(NSDictionary *)extraParams withNavigationClass:(Class)navigationClass animated:(BOOL)animated completion:(void (^)(void))completion;
 
 - (void)popViewControllerAnimated:(BOOL)animated;
 //回跳到第几层, A->B->C,那么当index为1时跳转到B， index为2跳转到A

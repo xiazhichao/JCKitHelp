@@ -27,10 +27,6 @@
     
     if (self.jcNavigationController) {
         [self.jcNavigationController removeAtIndex:1];
-    } else {
-        NSMutableArray *viewControllers = [self.navigationController.viewControllers mutableCopy];
-        [viewControllers removeObjectAtIndex:1];
-        [self.navigationController setViewControllers:viewControllers animated:YES];
     }
 }
 

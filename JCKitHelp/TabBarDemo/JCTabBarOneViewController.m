@@ -8,6 +8,7 @@
 
 #import "JCTabBarOneViewController.h"
 #import "UITabBarItem+Universal.h"
+#import "JCRouter.h"
 
 @interface JCTabBarOneViewController ()
 
@@ -44,5 +45,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)onClickPop:(id)sender {
+    [[JCRouter shareRouter] dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

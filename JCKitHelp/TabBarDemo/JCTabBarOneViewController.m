@@ -45,8 +45,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)onClickPop:(id)sender {
-    [[JCRouter shareRouter] dismissViewControllerAnimated:YES completion:nil];
-}
 
 @end

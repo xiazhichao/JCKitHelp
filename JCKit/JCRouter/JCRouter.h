@@ -14,6 +14,9 @@
 
 + (instancetype)shareRouter;
 
+- (UINavigationController *)currentNavigationViewController;
+- (UIViewController *)rootViewController;
+
 - (void)mapKey:(NSString *)key toController:(Class)controllerClass;
 
 - (void)pushURL:(NSString *)urlString;

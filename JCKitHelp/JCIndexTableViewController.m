@@ -49,21 +49,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-//        NSString *className = self.classNames[indexPath.row];
-//        Class class = NSClassFromString(className);
-//        if (class) {
-//            UIViewController *ctrl = class.new;
-//            ctrl.title = _titles[indexPath.row];
-//            [self.navigationController pushViewController:ctrl animated:YES];
-//        }
-        [[JCRouter shareRouter] presentURL:@"tabController/4/title" withNavigationClass:[UINavigationController class] completion:nil];
+        [[JCRouter shareRouter] pushURL:@"tabController/4/title"];
         return;
     }
     
-    [[JCRouter shareRouter] presentURL:@"TransitionDemo" completion:nil];
-    
-//    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"TransitionDemo" bundle:nil] instantiateInitialViewController];
-//    [self.navigationController pushViewController:viewController animated:YES];
+    [[JCRouter shareRouter] pushURL:@"TransitionDemo"];
 }
 
 /*

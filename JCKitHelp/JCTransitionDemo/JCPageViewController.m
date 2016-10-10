@@ -50,7 +50,7 @@
 */
 
 - (IBAction)onClickDismiss:(id)sender {
-    [[JCRouter shareRouter] dismissViewControllerWithIndex:1 animated:YES completion:nil];
+    [[JCRouter shareRouter] popViewControllerAnimated:YES];
 }
 
 @end

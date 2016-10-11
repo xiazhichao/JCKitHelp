@@ -50,7 +50,8 @@
 */
 
 - (IBAction)onClickDismiss:(id)sender {
-    [[JCRouter shareRouter] popViewControllerAnimated:YES];
+    [[JCRouter shareRouter] ]
+    [[JCRouter shareRouter] pushURL:@"pageController"];
 }
 
 @end

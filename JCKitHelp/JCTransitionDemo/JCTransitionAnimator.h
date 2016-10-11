@@ -6,11 +6,12 @@
 //  Copyright © 2016年 Jam. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "JCTransition.h"
 
 @interface JCTransitionAnimator : NSObject <UINavigationControllerDelegate>
 
-//转场动画时间默认0.5秒
-@property (nonatomic, assign) NSTimeInterval duration;
+- (instancetype)initPushTransition:(JCTransition *)pushTransition withPopTransition:(JCTransition *)popTransition;
 
 @end

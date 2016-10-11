@@ -9,9 +9,9 @@
 #import "JCTransitionDemoViewController.h"
 #import "JCRouter.h"
 #import "UIViewController+JCNavigationControllerExtension.h"
-#import "JCTranition.h"
+#import "JCBaseTransitionAnimator.h"
 
-@interface JCTransitionDemoViewController () <UINavigationControllerDelegate>
+@interface JCTransitionDemoViewController ()
 
 @end
 
@@ -60,7 +60,8 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[JCRouter shareRouter] currentNavigationViewController].delegate = self;
+    JCBaseTransitionAnimator *animator = [[JCBaseTransitionAnimator alloc] init];
+    [[JCRouter shareRouter] currentNavigationViewController].delegate = animator;
     [[JCRouter shareRouter] pushURL:@"pageController"];
 }
 
@@ -73,21 +74,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-#pragma mark - **************** Navgation delegate
-/** 返回转场动画实例*/
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                  animationControllerForOperation:(UINavigationControllerOperation)operation
-                                               fromViewController:(UIViewController *)fromVC
-                                                 toViewController:(UIViewController *)toVC
-{
-    if (operation == UINavigationControllerOperationPush) {
-        self.jcNavigationController.delegate = nil;
-        return [[JCTranition alloc] init];
-    } else if (operation == UINavigationControllerOperationPop){
-        return nil;
-    }
-    return nil;
-}
 
 @end

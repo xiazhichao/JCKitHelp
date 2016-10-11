@@ -1,17 +1,29 @@
 //
-//  JCTranition.m
+//  JCTransition.m
 //  JCKitHelp
 //
-//  Created by 贾淼 on 16/9/27.
+//  Created by seris-Jam on 16/10/11.
 //  Copyright © 2016年 Jam. All rights reserved.
 //
 
-#import "JCTranition.h"
+#import "JCTransition.h"
 
-@implementation JCTranition
+@implementation JCTransition
 
-- (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
-    return 3.0f;
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.duration = 3.0f;
+    }
+    
+    return self;
+}
+
+#pragma mark UIViewControllerAnimatedTransitioning
+
+- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+    return _duration;
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
@@ -24,7 +36,7 @@
     toViewController.view.frame = CGRectOffset(finalFrameForVC, 0, bounds.size.height);
     [[transitionContext containerView] addSubview:toViewController.view];
     
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.3f usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:self.duration delay:0.3f usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
         fromViewController.view.alpha = 0.8f;
         toViewController.view.frame = finalFrameForVC;
     } completion:^(BOOL finished){

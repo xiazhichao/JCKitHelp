@@ -31,7 +31,7 @@
     // Override point for customization after application launch.
     
     UIViewController *rootViewController = [UIStoryboard storyboardWithName:@"Main" identifier:nil];
-    JCNavigationViewController *navc = [[JCNavigationViewController alloc] initWithRootViewController:rootViewController];
+    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setRootViewController:navc];

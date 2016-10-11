@@ -36,7 +36,6 @@
 		0D99CD081D9AB1CD007BBE0E /* TransitionDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D99CD071D9AB1CD007BBE0E /* TransitionDemo.storyboard */; };
 		0D99CD0B1D9AB202007BBE0E /* JCTransitionDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D99CD0A1D9AB202007BBE0E /* JCTransitionDemoViewController.m */; };
 		0D99CD0F1D9AB61F007BBE0E /* JCPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D99CD0E1D9AB61F007BBE0E /* JCPageViewController.m */; };
-		0D99CD121D9ABCD5007BBE0E /* JCTranition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D99CD111D9ABCD5007BBE0E /* JCTranition.m */; };
 		0DF2B6981D941BEF006FFE4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2B6971D941BEF006FFE4C /* main.m */; };
 		0DF2B69B1D941BEF006FFE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2B69A1D941BEF006FFE4C /* AppDelegate.m */; };
 		0DF2B6A11D941BEF006FFE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF2B69F1D941BEF006FFE4C /* Main.storyboard */; };
@@ -50,7 +49,10 @@
 		0DF2B7151D9425E1006FFE4C /* JCTabBarOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2B7141D9425E1006FFE4C /* JCTabBarOneViewController.m */; };
 		0DF2B7181D9425F3006FFE4C /* JCTabBarTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF2B7171D9425F3006FFE4C /* JCTabBarTwoViewController.m */; };
 		0DF2B71A1D94266A006FFE4C /* TabBarDemo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF2B7191D94266A006FFE4C /* TabBarDemo.xcassets */; };
+		3916E7BD1DAB98140065CEC9 /* JCTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3916E7BC1DAB98140065CEC9 /* JCTransitionAnimator.m */; };
 		3984B4291DA9D8A100A5FAFA /* JCRouterParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984B4281DA9D8A100A5FAFA /* JCRouterParams.m */; };
+		39EE59331DACBC760045EE67 /* JCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EE59321DACBC760045EE67 /* JCTransition.m */; };
+		39EE59361DACC2A40045EE67 /* JCBaseTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EE59351DACC2A40045EE67 /* JCBaseTransitionAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,8 +113,6 @@
 		0D99CD0A1D9AB202007BBE0E /* JCTransitionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTransitionDemoViewController.m; sourceTree = "<group>"; };
 		0D99CD0D1D9AB61F007BBE0E /* JCPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPageViewController.h; sourceTree = "<group>"; };
 		0D99CD0E1D9AB61F007BBE0E /* JCPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCPageViewController.m; sourceTree = "<group>"; };
-		0D99CD101D9ABCD5007BBE0E /* JCTranition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTranition.h; sourceTree = "<group>"; };
-		0D99CD111D9ABCD5007BBE0E /* JCTranition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTranition.m; sourceTree = "<group>"; };
 		0DF2B6931D941BEF006FFE4C /* JCKitHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCKitHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF2B6971D941BEF006FFE4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DF2B6991D941BEF006FFE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,8 +134,14 @@
 		0DF2B7161D9425F3006FFE4C /* JCTabBarTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTabBarTwoViewController.h; sourceTree = "<group>"; };
 		0DF2B7171D9425F3006FFE4C /* JCTabBarTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTabBarTwoViewController.m; sourceTree = "<group>"; };
 		0DF2B7191D94266A006FFE4C /* TabBarDemo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBarDemo.xcassets; sourceTree = "<group>"; };
+		3916E7BB1DAB98140065CEC9 /* JCTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTransitionAnimator.h; sourceTree = "<group>"; };
+		3916E7BC1DAB98140065CEC9 /* JCTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTransitionAnimator.m; sourceTree = "<group>"; };
 		3984B4271DA9D8A100A5FAFA /* JCRouterParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRouterParams.h; sourceTree = "<group>"; };
 		3984B4281DA9D8A100A5FAFA /* JCRouterParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRouterParams.m; sourceTree = "<group>"; };
+		39EE59311DACBC760045EE67 /* JCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCTransition.h; sourceTree = "<group>"; };
+		39EE59321DACBC760045EE67 /* JCTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCTransition.m; sourceTree = "<group>"; };
+		39EE59341DACC2A40045EE67 /* JCBaseTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBaseTransitionAnimator.h; sourceTree = "<group>"; };
+		39EE59351DACC2A40045EE67 /* JCBaseTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBaseTransitionAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,8 +395,12 @@
 		0D99CD061D9AB160007BBE0E /* JCTransitionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0D99CD101D9ABCD5007BBE0E /* JCTranition.h */,
-				0D99CD111D9ABCD5007BBE0E /* JCTranition.m */,
+				39EE59311DACBC760045EE67 /* JCTransition.h */,
+				39EE59321DACBC760045EE67 /* JCTransition.m */,
+				3916E7BB1DAB98140065CEC9 /* JCTransitionAnimator.h */,
+				3916E7BC1DAB98140065CEC9 /* JCTransitionAnimator.m */,
+				39EE59341DACC2A40045EE67 /* JCBaseTransitionAnimator.h */,
+				39EE59351DACC2A40045EE67 /* JCBaseTransitionAnimator.m */,
 				0D99CD091D9AB202007BBE0E /* JCTransitionDemoViewController.h */,
 				0D99CD0A1D9AB202007BBE0E /* JCTransitionDemoViewController.m */,
 				0D99CD0D1D9AB61F007BBE0E /* JCPageViewController.h */,
@@ -561,11 +571,12 @@
 				0D99CD031D9AB07E007BBE0E /* UIViewController+JCNavigationControllerExtension.m in Sources */,
 				0D4812541D9D44B50049D713 /* UIView+JCView.m in Sources */,
 				0D99CD011D9AB07E007BBE0E /* JCWrapNavigationController.m in Sources */,
+				39EE59361DACC2A40045EE67 /* JCBaseTransitionAnimator.m in Sources */,
 				0D4812531D9D44B50049D713 /* UIStoryboard+Extension.m in Sources */,
-				0D99CD121D9ABCD5007BBE0E /* JCTranition.m in Sources */,
 				0DF2B7151D9425E1006FFE4C /* JCTabBarOneViewController.m in Sources */,
 				0DF2B69B1D941BEF006FFE4C /* AppDelegate.m in Sources */,
 				0D99CCF41D9AB076007BBE0E /* SSKeychainQuery.m in Sources */,
+				3916E7BD1DAB98140065CEC9 /* JCTransitionAnimator.m in Sources */,
 				0D48124F1D9D44B50049D713 /* UICollectionView+JCPlaceHoldView.m in Sources */,
 				0D48126E1D9D44D60049D713 /* NSTimer+Addition.m in Sources */,
 				0D4812751D9D4C610049D713 /* JCRouter.m in Sources */,
@@ -573,6 +584,7 @@
 				0DF2B7181D9425F3006FFE4C /* JCTabBarTwoViewController.m in Sources */,
 				0D4812381D9D44AA0049D713 /* NSDictionary+ExtraMethod.m in Sources */,
 				0D48126C1D9D44D60049D713 /* UIDevice+Unidentifier.m in Sources */,
+				39EE59331DACBC760045EE67 /* JCTransition.m in Sources */,
 				0DF2B6981D941BEF006FFE4C /* main.m in Sources */,
 				0D48126D1D9D44D60049D713 /* JUtility.m in Sources */,
 				0D4812511D9D44B50049D713 /* UITableView+JCPlaceHoldView.m in Sources */,

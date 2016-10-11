@@ -7,7 +7,7 @@
 //
 
 #import "JCIndexTableViewController.h"
-
+#import "JCNavigationViewController.h"
 #import "JCRouter.h"
 
 @interface JCIndexTableViewController ()
@@ -49,7 +49,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-        [[JCRouter shareRouter] pushURL:@"tabController/4/title"];
+        [[JCRouter shareRouter] presentURL:@"tabController/4/title" withNavigationClass:[JCNavigationViewController class] completion:nil];
         return;
     }
     
